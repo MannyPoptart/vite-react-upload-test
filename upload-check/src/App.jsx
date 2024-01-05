@@ -1,28 +1,16 @@
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Parts from './pages/Parts'
+import ErrorPage from './pages/ErrorPage'
 import {createBrowserRouter, RouterProvider, Route, Link, Outlet} from 'react-router-dom'
 
 import './App.css'
 
-const Dashboard = () => (
-  <div>
-    <Navbar />
-    <Outlet />
-    <Footer />
-  </div>
-)
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Dashboard />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-    ]
+    element: <Home />,
   },
   {
     path: '/parts',
